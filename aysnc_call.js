@@ -1,14 +1,16 @@
+
 const request= require('request')
 
-//direccion de la API
-const url='https://apisimpsons.fly.dev/api/personajes'
+
+const url='https://hp-api.onrender.com/api/characters'
 
 let r=request(url,
                  {json:true},
                  (error,respuesta,body)=>{
-                 let personaje=body
-                 personaje.forEach(personajes => {
-                    console.log(personajes.Nombre, personajes.Ocupacion)
+                 let magia=body
+                 magia.forEach(magic => {
+                    console.log(magic.name)
                     console.log("-----------------")
                  });
-                 })         
+                 
+                 })
